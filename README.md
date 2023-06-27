@@ -1,6 +1,6 @@
-# filmify
+# Filmify
 
-Filmify is and app to find movie name by video
+Filmify is an app to find movie name by video
 
 ## Getting Started
 
