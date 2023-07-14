@@ -17,47 +17,89 @@ class _SearchMovieTypingState extends State<SearchMovieTyping> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Stack(
-        children: <Widget>[
-          Padding(
-            padding: const EdgeInsets.only(
-              top: 15,
-              left: 5,
-              right: 5
-            ),
-            child: TextField(
-              controller: inputtedFilm,
-            ),
+      body: Row(
+        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+        children: [
+          IconButton(
+
+              onPressed: backButtonWork ? () {
+
+              } : null,
+              icon: const Icon(
+
+                Icons.arrow_back_ios_new,
+                size: 100,
+              )
           ),
-          const SizedBox(
-            height: 35,
-          ),
-          Padding(
-            padding: const EdgeInsets.only(
-              bottom: 10
-            ),
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.center,
-              children: [
-                IconButton(
+          IconButton(
 
-                  onPressed: backButtonWork ? () {
 
-                  } : null,
-                  icon: const Icon(Icons.arrow_back_ios_new)
-                ),
-                IconButton(
+              onPressed: forwardButtonWork ? () {
 
-                  onPressed: forwardButtonWork ? () {
+              } : null,
+              icon: const Icon(
 
-                  } : null,
-                  icon: const Icon(Icons.arrow_forward_ios)
-                )
-              ],
-            ),
+                Icons.arrow_forward_ios,
+                size: 100,
+              )
           )
         ],
-      ),
+      )
+      // Padding(
+      //   padding: const EdgeInsets.only(
+      //     top: 100,
+      //     bottom: 10,
+      //   ),
+      //   child: Column(
+      //     children: [
+      //       Padding(
+      //         padding: const EdgeInsets.only(
+      //           left: 18,
+      //           right: 15
+      //         ),
+      //         child: TextField(
+      //           controller: inputtedFilm,
+      //           decoration: InputDecoration(
+      //             hintText: "Input film title",
+      //             suffixIcon: IconButton(
+      //               icon: const Icon(Icons.search),
+      //               onPressed: () {},
+      //             )
+      //           ),
+      //         ),
+      //       ),
+      //       const SizedBox(
+      //         height: 35,
+      //       ),
+      //       Row(
+      //         // crossAxisAlignment: CrossAxisAlignment.center,
+      //         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+      //         children: [
+      //           IconButton(
+      //
+      //               onPressed: backButtonWork ? () {
+      //
+      //               } : null,
+      //               icon: const Icon(
+      //                 Icons.arrow_back_ios_new,
+      //                 size: 100,
+      //               )
+      //           ),
+      //           IconButton(
+      //
+      //               onPressed: forwardButtonWork ? () {
+      //
+      //               } : null,
+      //               icon: const Icon(
+      //                 Icons.arrow_forward_ios,
+      //                 size: 100,
+      //               )
+      //           )
+      //         ],
+      //       ),
+      //     ],
+      //   ),
+      // ),
     );
   }
 }
